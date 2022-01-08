@@ -1,8 +1,13 @@
 <div class="container">
   <h1>物件一覧</h1>
     <% @rentals.each do |rental|%>
-      <table>
-        <tr><th>マンション名</th><td><%= rental.name %></td></tr>
+      <table class="table">
+        <h2><%= rental.name %></h2>
+        <tr class="child"><th>住所</th><td><%= rental.address %></td></tr>
+        <tr class="child"><th>交通</th><td><%= rental.traffic %></td></tr>
+        <tr class="child"><th>築年</th><td><%= rental.built %></td></tr>
+        <tr class="child"><th>階数</th><td><%= rental.structure %></td></tr>
+        <tr class="child"><th>向き</th><td><%= rental.direction %></td></tr>
       </table>
     <% end %>
 </div>
