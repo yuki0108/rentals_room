@@ -1,7 +1,8 @@
-<h1>Tweets#index</h1>
-<p>Find me in app/views/tweets/index.html.erb</p>
-
-<%# コンポーネントを追加 %>
-<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
+<div class="container">
+  <h1>物件一覧</h1>
+    <% @rentals.each do |rental|%>
+      <table>
+        <tr><th>マンション名</th><td><%= rental.name %></td></tr>
+      </table>
+    <% end %>
 </div>
