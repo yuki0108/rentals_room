@@ -1,0 +1,25 @@
+<div class="container">
+<%= form_with model: @rental, local: true do |f| %>
+  <p><%= f.label :name %><br>
+    <%= f.text_field :name %>マンション名を入力
+  </p>
+  <p><%= f.label :address %><br>
+    <%= f.text_field :address %> 住所を入力
+  </p>
+  <p><%= f.label :traffic %><br>
+    <%= f.text_field :traffic %>駅からの時間を入力
+  </p>
+  <p><%= f.label :built %><br>
+    <%= f.text_area :built %> 築年数を入力
+  </p>
+  <p><%= f.label :structure %><br>
+    <%= f.text_area :structure %> 構造を入力
+  </p>
+  <p><%= f.label :direction %><br>
+    <%= f.text_area :direction %> 向きを入力
+  </p>
+  <p>
+    <%= f.submit %>保存
+  </p>
+<% end %>
+</div>
