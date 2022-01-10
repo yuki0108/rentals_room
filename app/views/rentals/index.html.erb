@@ -1,6 +1,5 @@
 <div class="container">
   <h1>物件一覧</h1>
-    
     <% @rentals.each do |rental|%>
       <table class="table">
         <h2><%= rental.name %></h2>
@@ -9,6 +8,9 @@
         <tr class="child"><th>築年</th><td><%= rental.built %></td></tr>
         <tr class="child"><th>階数</th><td><%= rental.structure %></td></tr>
         <tr class="child"><th>向き</th><td><%= rental.direction %></td></tr>
+        <% if rental.image? %>
+          <tr class="child"><th>マンション</th><td><%= image_tag rental.image.url %></td></tr>
+        <% end %>
       </table>
     <% end %>
 </div>
